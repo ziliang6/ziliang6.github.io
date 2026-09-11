@@ -13,10 +13,23 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page">
     <header class="profile" id="top">
-      <img class="portrait" src="portrait.jpg" alt="Ziliang Qiu beside a cat outdoors" width="1397" height="1397" fetchpriority="high">
+      <button class="portrait-play" type="button" aria-label="Show portrait annotations: meow! I am a cat person!" aria-pressed="false">
+        <img class="portrait" src="portrait.jpg" alt="Ziliang Qiu beside a cat outdoors" width="1397" height="1397" fetchpriority="high">
+        <span class="meow-bubble" aria-hidden="true">meow</span>
+        <span class="cat-person-note" aria-hidden="true">
+          <svg class="crayon-arrow" viewBox="0 0 150 90" fill="none">
+            <defs><filter id="crayon-grain" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".075" numOctaves="3" seed="7" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
+            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon-grain)">
+              <path d="M132 12C123 55 67 70 16 49M16 49L39 41M16 49L30 70" stroke-width="5" opacity=".8"/>
+              <path d="M134 14C119 58 63 73 15 51M18 48L40 43M17 51L32 72" stroke-width="1.7"/>
+            </g>
+          </svg>
+          <span>I am a<br>cat person!</span>
+        </span>
+      </button>
       <h1>Ziliang Qiu <span lang="zh">丘子靓</span></h1>
       <p class="position">Ph.D. Student · University of Illinois Urbana-Champaign</p>
-      <div class="profile-links"><a href="mailto:ziliang6@illinois.edu">ziliang6@illinois.edu</a><a href="https://github.com/ziliang6">GitHub</a></div>
+      <div class="profile-links"><a href="mailto:ziliang6@illinois.edu">ziliang6@illinois.edu</a><a href="https://github.com/ziliang6">GitHub</a><a href="https://scholar.google.com.tw/citations?user=2x-poCAAAAAJ&amp;hl=zh-CN">Google Scholar</a></div>
       <nav aria-label="Main navigation"><a href="#biography">About Me</a><a href="#publications">Publications</a><a href="#education">Education</a></nav>
     </header>
 
@@ -24,7 +37,7 @@
       <section id="biography" class="biography" aria-labelledby="biography-title">
         <div class="section-heading"><h2 id="biography-title">About Me</h2></div>
         <p>Hi there! I'm <strong>Ziliang Qiu (<span lang="zh">丘子靓</span>)</strong>, a second-year Ph.D. student in the School of Information Sciences at the University of Illinois Urbana-Champaign (UIUC), advised by <a href="https://tedunderwood.com/ted-underwood/">Ted Underwood</a>.</p>
-        <p>My research focuses on computational literary studies, where I apply natural language processing to the analysis of literary texts while keeping humanistic questions at the center. I'm also interested in model-generated language, particularly its diversity and creativity.</p>
+        <p>My research focuses on <span class="word-red">computational</span> <span class="word-orange">literary</span> <span class="word-yellow">studies</span>, where I apply natural language processing to the analysis of literary texts while keeping humanistic questions at the center. I'm also interested in <span class="word-green">model-generated</span> <span class="word-cyan">language</span>, particularly its <span class="word-blue">diversity</span> and <span class="word-purple">creativity</span>.</p>
         <p>Before coming to Illinois, I received my M.A. in Linguistics and Applied Linguistics from the Institute of Chinese Information Processing at Beijing Normal University, where I was advised by Zhiying Liu and <a href="http://irishu.cn/">Renfen Hu</a>. I earned my B.A. in Chinese Linguistics from Central China Normal University.</p>
       </section>
 
@@ -53,7 +66,7 @@
               <h4><a href="https://aclanthology.org/2025.emnlp-main.550/">Deep associations, high creativity: A simple yet effective metric for evaluating large language models</a></h4>
               <p class="authors"><strong>Qiu, Z.</strong>, &amp; Hu, R.</p>
               <p class="venue">Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, pp. 10859–10872. <span class="venue-label">EMNLP 2025</span></p>
-              <div class="paper-links"><a href="https://aclanthology.org/2025.emnlp-main.550/">Paper <span aria-hidden="true">↗</span></a><a href="https://aclanthology.org/2025.emnlp-main.550.pdf">PDF <span aria-hidden="true">↗</span></a><a href="https://github.com/ziliang6/PACE">Code <span aria-hidden="true">↗</span></a></div>
+              <div class="paper-links"><a href="https://aclanthology.org/2025.emnlp-main.550/">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/ziliang6/PACE">Code <span aria-hidden="true">↗</span></a></div>
             </article></li>
           </ol>
         </div>
@@ -87,5 +100,19 @@
       <footer><span>© 2026 Ziliang Qiu</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
     </main>
   </div>
+<script>
+  const portraitButton = document.querySelector('.portrait-play');
+  portraitButton.addEventListener('click', (event) => {
+    if (event.detail === 0 || !window.matchMedia('(hover: hover)').matches) {
+      portraitButton.setAttribute('aria-pressed', String(portraitButton.getAttribute('aria-pressed') !== 'true'));
+    }
+  });
+  document.addEventListener('pointerdown', (event) => {
+    if (!portraitButton.contains(event.target)) portraitButton.setAttribute('aria-pressed', 'false');
+  });
+  portraitButton.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') portraitButton.setAttribute('aria-pressed', 'false');
+  });
+</script>
 </body>
 </html>
