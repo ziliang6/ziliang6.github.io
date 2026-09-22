@@ -48,25 +48,6 @@ footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.page{max-width:none;padding:0}.portrait{width:110px}nav,.skip-link,footer{display:none}.profile{margin-bottom:20px}body{font-size:11pt}article,.education-list li{break-inside:avoid}a{text-decoration:none}section{margin-bottom:25px}}
 
-/* Portrait annotations appear only on hover or deliberate activation. */
-.portrait-play{position:relative;display:block;width:210px;max-width:100%;margin:0 auto 23px;padding:0;border:0;background:none;color:inherit;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-.portrait-play .portrait{width:100%;margin:0}
-.portrait-play:focus-visible{outline:2px dashed #555;outline-offset:7px;border-radius:3px}
-.meow-bubble,.cat-person-note{position:absolute;pointer-events:none;opacity:0;transition:opacity .18s ease,transform .3s cubic-bezier(.2,.8,.3,1.3);z-index:1;font-family:'Segoe Print','Comic Sans MS',cursive}
-.meow-bubble{left:-42px;top:43px;padding:3px 12px 5px;background:#ffe782;color:#51400e;border:2px solid #dfb742;border-radius:54% 46% 48% 52% / 49% 55% 45% 51%;font-size:18px;font-weight:700;line-height:1.4;transform:translateY(9px) rotate(-12deg) scale(.8)}
-.meow-bubble:before{content:'';position:absolute;right:9px;bottom:-13px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:13px solid #dfb742;transform:skewX(24deg);transform-origin:top center}
-.meow-bubble:after{content:'';position:absolute;right:11px;bottom:-9px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:10px solid #ffe782;transform:skewX(24deg);transform-origin:top center}
-.cat-person-note{left:calc(100% - 8px);top:15px;width:160px;height:145px;color:#dc6393;transform:translateY(9px) rotate(8deg) scale(.9);text-align:center}
-.cat-person-note>span{position:absolute;top:0;right:0;font-size:22px;line-height:1.25;font-weight:700;letter-spacing:.2px;text-shadow:.7px .3px #efa9c4,-.5px .6px #efa9c4}
-.crayon-arrow{position:absolute;left:-54px;top:43px;width:150px;height:90px;overflow:visible}
-.portrait-play[aria-pressed='true'] .meow-bubble,.portrait-play[aria-pressed='true'] .cat-person-note{opacity:1;transform:translateY(0) rotate(-7deg) scale(1)}
-.portrait-play[aria-pressed='true'] .cat-person-note{transform:translateY(0) rotate(5deg) scale(1)}
-@media(hover:hover){.portrait-play:hover .meow-bubble{opacity:1;transform:translateY(0) rotate(-7deg) scale(1)}.portrait-play:hover .cat-person-note{opacity:1;transform:translateY(0) rotate(5deg) scale(1)}}
-@media(max-width:600px){.portrait-play{width:185px}}
-@media(max-width:520px){.meow-bubble{left:-10px;top:18px;font-size:16px;padding:2px 10px 4px}.cat-person-note{left:auto;right:-35px;top:132px;width:130px;height:65px}.cat-person-note>span{font-size:18px;background:rgba(255,255,255,.94);padding:3px 6px;border-radius:4px}.crayon-arrow{width:94px;height:57px;left:14px;top:-50px;transform:rotate(78deg)}}
-@media(prefers-reduced-motion:reduce){.meow-bubble,.cat-person-note{transition:none}}
-@media print{.portrait-play{width:110px}.meow-bubble,.cat-person-note{display:none}}
-
 /* Bundled fonts keep typography consistent across devices. */
 :lang(zh){font-family:"Homepage Source Han Serif","Source Han Serif SC","思源宋体","SimSun",serif;font-weight:700;font-synthesis:none}
 .biography .word-red{color:#c83737}

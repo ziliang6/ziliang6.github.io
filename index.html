@@ -7,26 +7,13 @@
   <meta name="theme-color" content="#ffffff">
   <title>Ziliang Qiu</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=education-static-20260922">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page">
     <header class="profile" id="top">
-      <button class="portrait-play" type="button" aria-label="Show portrait annotations: meow! I am a cat person!" aria-pressed="false">
-        <img class="portrait" src="portrait.jpg" alt="Ziliang Qiu beside a cat outdoors" width="1397" height="1397" fetchpriority="high">
-        <span class="meow-bubble" aria-hidden="true">meow</span>
-        <span class="cat-person-note" aria-hidden="true">
-          <svg class="crayon-arrow" viewBox="0 0 150 90" fill="none">
-            <defs><filter id="crayon-grain" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".075" numOctaves="3" seed="7" result="grain"/><feDisplacementMap in="SourceGraphic" in2="grain" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter></defs>
-            <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon-grain)">
-              <path d="M132 12C123 55 67 70 16 49M16 49L39 41M16 49L30 70" stroke-width="5" opacity=".8"/>
-              <path d="M134 14C119 58 63 73 15 51M18 48L40 43M17 51L32 72" stroke-width="1.7"/>
-            </g>
-          </svg>
-          <span>I am a<br>cat person!</span>
-        </span>
-      </button>
+      <img class="portrait" src="portrait.jpg" alt="Ziliang Qiu beside a cat outdoors" width="1397" height="1397" fetchpriority="high">
       <h1>Ziliang Qiu <span lang="zh">丘子靓</span></h1>
       <p class="position">Ph.D. Student · University of Illinois Urbana-Champaign</p>
       <div class="profile-links"><a href="mailto:ziliang6@illinois.edu">ziliang6@illinois.edu</a><a href="https://github.com/ziliang6">GitHub</a><a href="https://scholar.google.com.tw/citations?user=2x-poCAAAAAJ&amp;hl=zh-CN">Google Scholar</a></div>
@@ -46,6 +33,12 @@
         <div class="year-group">
           <h3 class="year">2026</h3>
           <ol class="papers" aria-label="Publications in 2026">
+            <li><article>
+              <h4><a href="https://arxiv.org/pdf/2609.23178">Chronologic: Measuring Language Models’ Ability to Represent the Past</a></h4>
+              <p class="authors">Ted Underwood, <strong>Ziliang Qiu</strong>, Sarah Griebel, Laura K. Nelson, Edwin Roland, Wenyi Shang, &amp; Matthew Wilkens</p>
+              <p class="venue">arXiv preprint, 2026.</p>
+              <div class="paper-links"><a href="https://arxiv.org/pdf/2609.23178">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/Historical-AI-Lab/Chronologic-EN">Code <span aria-hidden="true">↗</span></a></div>
+            </article></li>
             <li><article>
               <h4>Applications of text similarity computation in digital humanities research: A review of the 5th Beijing Digital Humanities Workshop</h4>
               <p class="authors">Hu, R., Wang, Y., &amp; <strong>Qiu, Z.</strong></p>
@@ -93,26 +86,12 @@
         <div class="section-heading"><h2 id="education-title">Education</h2></div>
         <ul class="education-list">
           <li><h3>Ph.D. in Information Sciences</h3><p>School of Information Sciences, University of Illinois Urbana-Champaign</p><p>Advisor: <a href="https://tedunderwood.com/ted-underwood/">Ted Underwood</a> · In progress</p></li>
-          <li><h3>M.A. in Linguistics and Applied Linguistics</h3><p>Institute of Chinese Information Processing, Beijing Normal University</p><p>Advisors: Zhiying Liu and <a href="http://irishu.cn/">Renfen Hu</a></p></li>
-          <li><h3>B.A. in Chinese Linguistics</h3><p>Central China Normal University</p></li>
+          <li><h3>M.A. in Linguistics and Applied Linguistics</h3><p>2022–2025</p><p>Institute of Chinese Information Processing, Beijing Normal University</p><p>Advisors: Zhiying Liu and <a href="http://irishu.cn/">Renfen Hu</a></p></li>
+          <li><h3>B.A. in Chinese Linguistics</h3><p>2018–2022</p><p>Central China Normal University</p></li>
         </ul>
       </section>
       <footer><span>© 2026 Ziliang Qiu</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></footer>
     </main>
   </div>
-<script>
-  const portraitButton = document.querySelector('.portrait-play');
-  portraitButton.addEventListener('click', (event) => {
-    if (event.detail === 0 || !window.matchMedia('(hover: hover)').matches) {
-      portraitButton.setAttribute('aria-pressed', String(portraitButton.getAttribute('aria-pressed') !== 'true'));
-    }
-  });
-  document.addEventListener('pointerdown', (event) => {
-    if (!portraitButton.contains(event.target)) portraitButton.setAttribute('aria-pressed', 'false');
-  });
-  portraitButton.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') portraitButton.setAttribute('aria-pressed', 'false');
-  });
-</script>
 </body>
 </html>
