@@ -8,7 +8,7 @@ a:focus-visible{outline:2px solid #111;outline-offset:5px}
 ::selection{background:#ddd;color:#000}
 .skip-link{position:fixed;top:8px;left:8px;z-index:10;background:#111;color:#fff;padding:8px 15px;transform:translateY(-160%)}
 .skip-link:focus{transform:translateY(0)}
-.page{max-width:848px;margin:0 auto;padding:52px 30px 25px}
+.page{max-width:1080px;margin:0 auto;padding:52px 30px 25px}
 .profile{text-align:center;margin-bottom:42px}
 .portrait{display:block;width:210px;height:auto;max-width:100%;margin:0 auto 23px;border-radius:3px}
 h1{font-size:32px;line-height:1.3;font-weight:600;letter-spacing:-.6px;margin:0 0 10px}
@@ -24,20 +24,22 @@ section{margin-bottom:42px}
 h2{font-size:23px;line-height:1.4;font-weight:600;margin:0}
 .biography p{margin:0 0 17px}
 .biography p:last-child{margin-bottom:0}
-.year-group{margin-top:25px}
-.year{font-size:17px;font-weight:600;line-height:1.4;margin:0 0 18px}
-.papers{list-style:none;margin:0;padding:0}
-.papers li{margin:0 0 25px}
+.year-group{display:grid;grid-template-columns:82px minmax(0,1fr);gap:28px;margin-top:28px}
+.year{font-size:18px;font-weight:600;line-height:1.5;margin:0;padding-top:1px}
+.papers{list-style:none;margin:0;padding:0;min-width:0}
+.papers li{margin:0 0 28px;padding:0 0 28px;border-bottom:1px solid #ededed}
 .papers li:last-child{margin-bottom:0}
-h4{font-size:16px;line-height:1.65;font-weight:600;margin:0 0 5px}
+.year-group:last-child .papers li:last-child{border-bottom:0;padding-bottom:0}
+h4{font-size:18px;line-height:1.5;font-weight:600;margin:0 0 10px}
 h4 a{text-decoration:none}
 h4 a:hover{text-decoration:underline}
-.authors{font-size:14px;margin:0 0 3px;color:var(--muted)}
+.authors{font-size:14px;margin:0 0 8px;color:var(--muted)}
 .authors strong{font-weight:600;color:var(--ink)}
 .venue{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
 .translation{font-style:italic}
 .venue-label{display:inline-block;font-size:11px;line-height:1.5;border:1px solid #aaa;padding:1px 6px;margin-top:5px;white-space:nowrap;color:var(--ink)}
-.paper-links{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;margin-top:7px}
+.paper-highlight{background:#f5f5f5;border-radius:6px;padding:13px 16px;margin:14px 0 0;font-size:14px;line-height:1.75;color:var(--ink)}
+.paper-links{display:flex;flex-wrap:wrap;gap:8px 25px;font-size:14px;margin-top:13px}
 .education-list{list-style:none;margin:0;padding:0}
 .education-list li{margin-bottom:22px}
 .education-list li:last-child{margin-bottom:0}
@@ -45,6 +47,7 @@ h4 a:hover{text-decoration:underline}
 .education-list p{font-size:14px;color:var(--muted);margin:0}
 footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line);padding:17px 0 0;font-size:12px;color:var(--muted)}
 @media(max-width:600px){.page{padding:30px 21px 20px}.portrait{width:185px}.profile{margin-bottom:32px}h1{font-size:28px}h1 span{font-size:23px}.position{font-size:14px}nav{gap:12px 22px}h2{font-size:22px}section{margin-bottom:34px}}
+@media(max-width:600px){.year-group{display:block;margin-top:24px}.year{margin-bottom:17px;padding:0}.papers li{padding-bottom:24px;margin-bottom:24px}h4{font-size:16px}.paper-highlight{padding:12px 14px}.paper-links{gap:8px 22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.page{max-width:none;padding:0}.portrait{width:110px}nav,.skip-link,footer{display:none}.profile{margin-bottom:20px}body{font-size:11pt}article,.education-list li{break-inside:avoid}a{text-decoration:none}section{margin-bottom:25px}}
 
@@ -58,7 +61,7 @@ footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid 
 .biography .word-blue{color:#2964bd}
 .biography .word-purple{color:#8542b0}
 
-@font-face{font-family:'Homepage Source Han Serif';src:url('fonts/source-han-serif-sc-bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'Homepage Source Han Serif';src:url('fonts/source-han-serif-sc-bold.otf?v=advisors-20260923') format('opentype');font-style:normal;font-weight:700;font-display:swap}
 @font-face{font-family:'Cascadia Code';src:url('fonts/cascadia-code-latin-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
 .profile h1,.section-heading h2,nav{font-family:'Comic Sans MS','Comic Sans',cursive;font-weight:600}
 .biography [class^='word-']{font-weight:700}
