@@ -63,5 +63,5 @@ footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid 
 
 @font-face{font-family:'Homepage Source Han Serif';src:url('fonts/source-han-serif-sc-bold.otf?v=advisors-20260923') format('opentype');font-style:normal;font-weight:700;font-display:swap}
 @font-face{font-family:'Cascadia Code';src:url('fonts/cascadia-code-latin-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
-.papers h4,.papers h4 a{font-family:'Comic Sans MS','Comic Sans',cursive;font-weight:600}
+.profile h1,.section-heading h2,nav,.year,.papers h4,.papers h4 a{font-family:'Comic Sans MS','Comic Sans',cursive;font-weight:600}
 .biography [class^='word-']{font-weight:700}
