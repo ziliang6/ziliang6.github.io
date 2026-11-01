@@ -8,7 +8,7 @@ a:focus-visible{outline:2px solid #111;outline-offset:5px}
 ::selection{background:#ddd;color:#000}
 .skip-link{position:fixed;top:8px;left:8px;z-index:10;background:#111;color:#fff;padding:8px 15px;transform:translateY(-160%)}
 .skip-link:focus{transform:translateY(0)}
-.page{max-width:1080px;margin:0 auto;padding:52px 30px 25px}
+.page{max-width:848px;margin:0 auto;padding:52px 30px 25px}
 .profile{text-align:center;margin-bottom:42px}
 .portrait{display:block;width:210px;height:auto;max-width:100%;margin:0 auto 23px;border-radius:3px}
 h1{font-size:32px;line-height:1.3;font-weight:600;letter-spacing:-.6px;margin:0 0 10px}
@@ -63,5 +63,5 @@ footer{display:flex;justify-content:space-between;gap:15px;border-top:1px solid 
 
 @font-face{font-family:'Homepage Source Han Serif';src:url('fonts/source-han-serif-sc-bold.otf?v=advisors-20260923') format('opentype');font-style:normal;font-weight:700;font-display:swap}
 @font-face{font-family:'Cascadia Code';src:url('fonts/cascadia-code-latin-600.woff2') format('woff2');font-style:normal;font-weight:600;font-display:swap}
-.profile h1,.section-heading h2,nav{font-family:'Comic Sans MS','Comic Sans',cursive;font-weight:600}
+.papers h4,.papers h4 a{font-family:'Comic Sans MS','Comic Sans',cursive;font-weight:600}
 .biography [class^='word-']{font-weight:700}
